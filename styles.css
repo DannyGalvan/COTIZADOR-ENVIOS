@@ -1,0 +1,49 @@
+.btn-forza
+{
+    color: white;
+    background-color: orange;
+    margin-right: 5px;
+    border-radius: 20px;
+}
+#navbarDropdown:hover
+{
+    color: palegoldenrod;
+}
+.dropdown-menu
+{
+    background-color: rgba(0,0,0,0.5);
+}
+.dropdown-item
+{
+    color: white;
+}
+#main .d-block 
+{
+    height: 90vh;
+}
+#carousel
+{
+    position: relative;
+}
+#carousel .overlay
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+#rastrer
+{
+    width: 70px;
+}
+#calculator
+{
+    width: 70px;
+}
+
+
+
+
