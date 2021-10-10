@@ -94,10 +94,10 @@
               </ul>
                   <div class="row">
                     <div class="col-3 col-md-3 col-lg-3">
-                      <a type="button" class="btn  btn-forza">Rastrear</a>
+                      <a type="button" class="btn btn-forza">Rastrear</a>
                   </div>
                     <div class="col-4 col-md-4 col-lg-4">
-                      <a type="button" class="btn  btn-forza">Iniciar Sesión</a>
+                      <a type="button" class="btn btn-forza">Iniciar Sesión</a>
                     </div>
                     <div class="col-4 col-md-4 col-lg-4">
                       <a type="button" class="btn btn-forza">Tel: 2388-0000</a>
@@ -214,8 +214,39 @@
         </div>
         <div class="containter">
           <div class="row">
-            <div class="col" >
-              <button id="agregando" class="btn btn-forza">agregando</button>
+            <div class="col-sm-12 col-lg-3 seccion" id="contenedor" >
+              <label class="seccion">
+               <strong class="ml-5">Paquetes</strong> 
+              </label>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="row">
+                <div class="col">
+                  <label for="">peso(Lbs)</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+                <div class="col">
+                  <label class="mr-5" for="">Es Fragil?</label>
+                  <input type="checkbox" class="form-check-input">
+                </div>
+              </div>
+              <div class="row" id="contenedor2">
+                <div class="col">
+                  <label for="">largo</label>
+                  <input type="number" class="form-control form-control-sm">
+                </div>
+                <div class="col">
+                  <label for="">ancho</label>
+                  <input type="number" class="form-control form-control-sm">
+                </div>
+                <div class="col">
+                  <label for="">Alto</label>
+                  <input type="number" class="form-control form-control-sm">  
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-3" id="imagencaja">
+              <img id="fotocontenedor" src="https://forzadelivery.com/wp-content/plugins/fd_pricing_calculator/assets/images/forza-box.png" alt="">
             </div>
           </div>
 
@@ -233,5 +264,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
   </body>
