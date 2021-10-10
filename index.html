@@ -118,17 +118,18 @@
                   <img class="d-block w-100" src="https://forzadelivery.com/wp-content/uploads/2021/03/imagenDF-768x432.jpeg" alt="Third slide">
                 </div>
                 <div class="overlay">
-                  <div class="containter">
-                    <div class="row align-items-center">
-                      <div class="col col-lg-12 offset-md-4 col-md-12 offset-2">
-                        <a  type="button" class="btn  btn-forza rounded-circle">
+                  <div class="containter  ">
+                    <div class="row">
+                      <div class="offset-2 col-md-12 offset-md-3 col-lg-12 offset-md-4">
+                           <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-forza rounded-circle" data-toggle="modal" data-target="#exampleModalCenter" >
                           <img id="calculator" src="https://img.icons8.com/ios/2x/calculator.png" alt="">
-                        </a>
-                        <span>cotizador</span>
-                        <a type="button" class="btn  btn-forza rounded-circle">
-                          <img id="rastrer" src="https://img.icons8.com/ios/2x/google-maps-new--v2.gifhttps://img.icons8.com/ios-filled/2x/google-maps-new.png" alt="">
-                        </a>
-                        <span>rastrear</span>
+                        </button>
+                          <span>Cotizador</span>
+                          <a type="button" class="btn  btn-forza rounded-circle">
+                            <img id="rastrer" src="https://img.icons8.com/ios/2x/google-maps-new--v2.gifhttps://img.icons8.com/ios-filled/2x/google-maps-new.png" alt="">
+                          </a>
+                          <span>Rastreador</span>
                       </div>
                     </div>
                   </div>
@@ -137,7 +138,89 @@
             </div>
           </main> 
     </header>
+ 
 
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="containter">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h6>Origen</h6>
+              <h6>Departamento</h6>
+              <select id="departamentoSelectOrigen" class="custom-select custom-select-sm">
+                <option selected>Selecciona Departamento</option>
+                <option value="1">Guatemala</option>
+                <option value="2">Escuintla</option>
+                <option value="3">Baja VeraPaz</option>
+              </select>
+              <h6>Municipio</h6>
+              <select class="custom-select custom-select-sm">
+                <option selected>Selecciona Municipio</option>
+                <option value="1">Chimaltenango</option>
+                <option value="2">Escuintla</option>
+                <option value="3">Baja VeraPaz</option>
+              </select>
+            </div>
+            <div class="col-12 col-lg-6">
+              <h6>Destino</h6>
+              <h6>departamento</h6>
+              <select class="custom-select custom-select-sm">
+                <option selected>Selecciona Departamento</option>
+                <option value="1">Chimaltenango</option>
+                <option value="2">Escuintla</option>
+                <option value="3">Baja VeraPaz</option>
+              </select>
+              <h6>Municipio</h6>
+              <select class="custom-select custom-select-sm">
+                <option selected>Selecciona Municipio</option>
+                <option value="1">Chimaltenango</option>
+                <option value="2">Escuintla</option>
+                <option value="3">Baja VeraPaz</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <label for="">Paquete</label>
+            </div>
+            <div class="col offset-6">
+              <button type="button" class="btn btn-forza">
+                + agregar paquete
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <img id="caja" src="https://img.icons8.com/ios/2x/box--v3.gif" alt="">
+                <label class="form-check-label" for="inlineRadio1">Caja</label>
+
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <img id="sobre" src="https://img.icons8.com/material-outlined/2x/secured-letter--v2.gif" alt="">
+                <label class="form-check-label" for="inlineRadio2">Sobre</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Calcular</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
