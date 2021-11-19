@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/ios/2x/calculator.png" type="image/x-icon">
     <title>PAGINA PRUEBA</title>
   </head>
   <body>
@@ -197,12 +198,15 @@
                 </div>
                 <div class="col offset-6">
                   <form action="">
-                    <button type="button" class="btn btn-forza">
+                    <button id="agregarFormulario" type="button" class="btn btn-forza">
                       + agregar paquete
                     </button>
                   </form>
                 </div>
               </div>
+            </div>
+            <!-- empieza formulario del paquete -->
+            <div id="formClonar" class="container clonar mt-1" >
               <div class="row">
                 <div class="col">
                   <form action="">
@@ -212,64 +216,76 @@
                       <label class="form-check-label" for="inlineRadio1">Caja</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
                       <img id="sobre" src="https://img.icons8.com/material-outlined/2x/secured-letter--v2.gif" alt="">
                       <label class="form-check-label" for="inlineRadio2">Sobre</label>
                     </div>
                   </form>
                 </div>
               </div>
-            </div>
-            <section id="section-modal">
-              <div class="containter">
-                <div class="row">
-                  <div class="col-sm-12 col-lg-3 seccion" id="contenedor" >
-                    <label class="seccion">
-                    <strong class="ml-5">Paquetes</strong> 
-                    </label>
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <div class="col-sm-12 col-lg-6">
-                        <form action="">
-                          <label for="">peso(Lbs)</label>
-                          <input type="text" class="form-control form-control-sm">
-                        </form>
-                      </div>
-                      <div class="col-sm-12 col-lg-6">
-                        <form action="">
-                          <label class="mr-5" for="">Es Fragil?</label>
-                          <input type="checkbox" class="form-check-input">
-                        </form>
-                      </div>
+              <div class="row">
+                <div class="col-sm-12 col-lg-3"  >
+                  <label id="contenedor">
+                  <strong class="ml-5">Paquetes</strong> 
+                  </label>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                      <form action="">
+                        <label for="">peso(Lbs)</label>
+                        <input id="peso" type="text" class="form-control form-control-sm">
+                      </form>
                     </div>
-                    <div class="row" id="contenedor2">
-                      <div class="col-sm-12 col-lg-4">
-                        <form action="">
-                          <label for="">Largo(cm)</label>
-                          <input type="number" class="form-control form-control-sm">
-                        </form> 
-                      </div>
-                      <div class="col-sm-12 col-lg-4">
-                        <form action="">
-                          <label for="">Ancho(cm)</label>
-                          <input type="number" class="form-control form-control-sm">
-                        </form>
-                      </div>
-                      <div class="col-sm-12 col-lg-4">
-                        <form action="">
-                          <label for="">Alto(cm)</label>
-                          <input type="number" class="form-control form-control-sm">
-                        </form>  
-                      </div>
+                    <div class="col-sm-12 col-lg-6">
+                      <form action="">
+                        <label class="mr-5" for="">Es Fragil?</label>
+                        <input type="checkbox" class="form-check-input">
+                      </form>
                     </div>
                   </div>
-                  <div class="col-sm-12 col-lg-3" id="imagencaja">
-                    <img id="fotocontenedor" src="https://forzadelivery.com/wp-content/plugins/fd_pricing_calculator/assets/images/forza-box.png" alt="">
+                  <div class="row" id="contenedor2">
+                    <div class="col-sm-12 col-lg-4">
+                      <form action="">
+                        <label for="">Largo(cm)</label>
+                        <input id="largo" type="number" class="form-control form-control-sm">
+                      </form> 
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                      <form action="">
+                        <label for="">Ancho(cm)</label>
+                        <input id="ancho" type="number" class="form-control form-control-sm">
+                      </form>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                      <form action="">
+                        <label for="">Alto(cm)</label>
+                        <input id="alto" type="number" class="form-control form-control-sm">
+                      </form>  
+                    </div>
                   </div>
                 </div>
+                <div class="col-sm-12 col-lg-3" id="imagencaja">
+                  <img id="fotocontenedor" src="https://forzadelivery.com/wp-content/plugins/fd_pricing_calculator/assets/images/forza-box.png" alt="">
+                </div>
               </div>
-            </section>
+            </div>
+            <!-- termina formulario del paquete -->
+            <div class="mt-2">
+                  <table id="tabla1">
+                    <thead>
+                      <tr>
+                        <td>No.</td>
+                        <td>Tipo</td>
+                        <td>Peso(lb)</td>
+                        <td>Alto(cm)</td>
+                        <td>Largo(cm)</td>
+                        <td>Recargo(Q)</td>
+                      </tr>
+                    </thead>
+                    <tbody id="tabla"></tbody>
+                  </table>
+            </div>
             <div class="container">
               <div class="row">
                 <div class="col">
@@ -280,6 +296,20 @@
                     </div>
                   </form>
                 </div>
+              </div>
+              <div class="row">
+                <table id="tabla1">
+                  <tbody>
+                    <tr>
+                      <th>tarifa total</th>
+                      <td>50</td>
+                    </tr>
+                    <tr>
+                      <th>Descuento</th>
+                      <td>50</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -306,5 +336,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="objeto.js"></script>
+    <script src="caja.js"></script>
+    <script src="sobre.js"></script>
     <script src="main.js"></script>
   </body>

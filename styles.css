@@ -60,12 +60,34 @@
 {
     background-color: rgb(248, 79, 0);
     color: white;
+    width: 100%;
+    height: 100%;
 }
 #fotocontenedor
 {
     width: 100%;
 }
-
+#formClonar
+{
+    border: 5px solid black;
+}
+#tabla1
+{
+    background-color: rgb(248, 79, 0);
+    color: white;
+    border: 5px solid black;
+    width: 100%;
+}
+td
+{
+    border: 1px solid black;
+    text-align: center;
+}
+th
+{
+    border: 1px solid black;
+    text-align: center;
+}
 
 
 
