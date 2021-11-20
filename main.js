@@ -56,23 +56,27 @@ totalizador.addEventListener('click',calcularTotal)
 var paquet = [];
 
  function agg() {
-        if (peso.value <= 0 || alto.value <= 0 || ancho.value <= 0 || largo.value <= 0) {
-            alert("ingrese todos los datos de su paquete")
-        }
-        else{
             if (inputradio1.checked) 
             {
-            agregandoCaja();
-            print();  
+                if (peso.value <= 0 || alto.value <= 0 || ancho.value <= 0 || largo.value <= 0) {
+                    alert("ingrese todos los datos de su paquete")
+                }
+                else{
+                agregandoCaja();
+                print();
+                }
             }
             else{
-            agregandoSobre();
-            print();
+                if (peso.value <= 0) {
+                    alert("ingrese todos los datos de su paquete")
+                }
+                else{
+                    agregandoSobre();
+                    print();
+                }       
             }
-        }
-        
- }
-
+    }
+     
 function agregandoSobre() {
     paquet.push(new sobre("sobre",peso.value));      
 }
