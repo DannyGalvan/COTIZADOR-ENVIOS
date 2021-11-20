@@ -167,16 +167,26 @@ function modificar()
 
     if (position >= 0 & inputradio2.checked) 
     {
-        paquet.splice(position,1,new sobre("sobre",peso.value));
-        print();
-        modificarPocicion.value = " ";
+        if (peso.value <= 0) {
+            alert("ingrese todos los datos de su paquete")
+        }
+        else{
+            paquet.splice(position,1,new sobre("sobre",peso.value));
+            print();
+            modificarPocicion.value = " ";
+        }
+        
     }
-
     if (position >= 0 & inputradio1.checked) 
     {
+        if (peso.value <= 0 || alto.value <= 0 || ancho.value <= 0 || largo.value <= 0) {
+            alert("ingrese todos los datos de su paquete")
+        }
+        else{
         paquet.splice(position,1,new caja("caja",peso.value,largo.value,ancho.value,alto.value));
         print();
         modificarPocicion.value = " ";
+        }
     }
     else{
         alert("ingrese una pocicion")
