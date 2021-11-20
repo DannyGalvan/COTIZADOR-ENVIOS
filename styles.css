@@ -48,6 +48,13 @@
 {
     width: 40px;
 }
+.buttoncotizador:hover
+{
+    background-color: white;
+    cursor: pointer;
+    transition: 700ms all;
+    transform: scale(1.3);
+}
 #caja
 {
     width: 40px;
@@ -71,7 +78,7 @@
 {
     border: 5px solid black;
 }
-#tabla1
+.tabla
 {
     background-color: rgb(248, 79, 0);
     color: white;

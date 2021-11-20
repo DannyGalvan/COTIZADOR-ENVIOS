@@ -120,17 +120,17 @@
             <img class="d-block w-100" src="https://forzadelivery.com/wp-content/uploads/2021/03/imagenDF-768x432.jpeg" alt="Third slide">
           </div>
           <div class="overlay">
-            <div class="containter  ">
+            <div class="containter mt-3">
               <div class="row">
                 <div class="offset-2 col-md-12 offset-md-3 col-lg-12 offset-md-4">
                      <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-forza rounded-circle" data-toggle="modal" data-target="#exampleModalCenter" >
+                  <button type="button" class="btn btn-forza rounded-circle buttoncotizador" data-toggle="modal" data-target="#exampleModalCenter" >
                     <img id="calculator" src="https://img.icons8.com/ios/2x/calculator.png" alt="">
                   </button>
                     <span>Cotizador</span>
-                    <a type="button" class="btn  btn-forza rounded-circle">
+                    <button type="button" class="btn  btn-forza rounded-circle buttoncotizador">
                       <img id="rastrer" src="https://img.icons8.com/ios/2x/google-maps-new--v2.gifhttps://img.icons8.com/ios-filled/2x/google-maps-new.png" alt="">
-                    </a>
+                    </button>
                     <span>Rastreador</span>
                 </div>
               </div>
@@ -172,9 +172,9 @@
                   <div class="col-12 col-lg-6">
                     <h6>Destino</h6>
                     <h6>departamento</h6>
-                    <select class="custom-select custom-select-sm">
+                    <select id="departamentoSelectDestino" class="custom-select custom-select-sm">
                       <option selected>Selecciona Departamento</option>
-                      <option value="1">Chimaltenango</option>
+                      <option value="1">Guatemala</option>
                       <option value="2">Escuintla</option>
                       <option value="3">Baja VeraPaz</option>
                     </select>
@@ -196,17 +196,15 @@
                 <div class="col">
                   <label for="">Paquete</label>
                 </div>
-                <div class="col offset-6">
-                  <form action="">
+                <div class="col offset-lg-6">
                     <button id="agregarFormulario" type="button" class="btn btn-forza">
                       + agregar paquete
                     </button>
-                  </form>
                 </div>
               </div>
             </div>
             <!-- empieza formulario del paquete -->
-            <div id="formClonar" class="container clonar mt-1" >
+            <div id="formClonar" class="container mt-1" >
               <div class="row">
                 <div class="col">
                   <form action="">
@@ -271,8 +269,42 @@
               </div>
             </div>
             <!-- termina formulario del paquete -->
+            <div class="container mt-2">
+              <div class="row">
+                <div class="col-2">
+                  <label for="">Paquete</label>
+                </div>
+                <div class="col"> 
+                  <form action="">
+                    <label for="">pocicion</label>
+                    <input id="modificarPocicion" type="number" class="form-control form-control-sm">
+                  </form>
+                </div>
+                <div class="col offset-lg-3 mt-3">
+                    <button id="modificarFormulario" type="button" class="btn btn-forza">
+                      = modificar paquete
+                    </button>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-2">
+                  <label for="">Paquete</label>
+                </div>
+                <div class="col"> 
+                  <form action="">
+                    <label for="">pocicion</label>
+                    <input id="eliminarPocicion" type="number" class="form-control form-control-sm">
+                  </form>
+                </div>
+                <div class="col offset-lg-3 mt-3">
+                    <button id="eliminarFormulario" type="button" class="btn btn-forza">
+                      X eliminar paquete
+                    </button>
+                </div>
+              </div>
+            </div>
             <div class="mt-2">
-                  <table id="tabla1">
+                  <table id="tabla1" class="tabla">
                     <thead>
                       <tr>
                         <td>No.</td>
@@ -298,16 +330,8 @@
                 </div>
               </div>
               <div class="row">
-                <table id="tabla1">
+                <table id="tabla2" class="tabla">
                   <tbody>
-                    <tr>
-                      <th>tarifa total</th>
-                      <td>50</td>
-                    </tr>
-                    <tr>
-                      <th>Descuento</th>
-                      <td>50</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -317,12 +341,8 @@
             <div class="container">
               <div class="row">
                 <div class="col">
-                  <button type="button" class="btn btn-forza">Calcular</button>
+                  <button id="totalizador" type="button" class="btn btn-forza">Calcular</button>
                   <button type="button" class="btn btn-forza" data-dismiss="modal">Cerrar</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
                 </div>
               </div>
             </div>
