@@ -84,6 +84,10 @@ var paquet = [];
                 else{
                 agregandoCaja();
                 print();
+                peso.value = ""
+                alto.value = ""
+                ancho.value = ""
+                largo.value = ""
                 }
             }
             else{
@@ -93,6 +97,7 @@ var paquet = [];
                 else{
                     agregandoSobre();
                     print();
+                    peso.value = ""
                 }       
             }
     }
@@ -240,6 +245,7 @@ function modify() {
                 if (val.checked) {
                     paquet.splice(pocition,1,new sobre("sobre",peso.value));
                     print(); 
+                    peso.value = ""
                 }
              }
          }
@@ -255,7 +261,11 @@ function modify() {
                let val = document.getElementById(`${id}`);
                if (val.checked) {
                    paquet.splice(pocition,1,new caja("caja",peso.value,largo.value,ancho.value,alto.value));
-                   print();  
+                   print();
+                   peso.value = ""
+                   alto.value = ""
+                   ancho.value = ""
+                   largo.value = ""
                }  
             } 
         }
@@ -299,12 +309,10 @@ function calcularTotal()
             if (dimension > pesado)
             {
                 resultado = ((parseFloat(dimension) - 30) * 0.90);
-                console.log( "dimension " +resultado)
             }
             else
             {
                 resultado = ((parseFloat(pesado) - 30) * 0.90);
-                console.log("pesado " + resultado)
             }
     
             let parar = resultado + 30

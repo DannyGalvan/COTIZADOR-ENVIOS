@@ -5,7 +5,7 @@
 }
 .btn-forza
 {
-    color: white;
+    color: rgb(13, 15, 43);
    background-color: rgb(216, 238, 14);
     margin-right: 5px;
     border-radius: 20px;
@@ -99,7 +99,7 @@ h6
 {
    background-color: rgb(13, 15, 43);
     color: white;
-    border: 5px solid rgb(216, 238, 14);
+    border: 3px solid rgb(216, 238, 14);
     width: 100%;
 }
 td
